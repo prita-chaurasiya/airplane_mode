@@ -13,7 +13,9 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "in_list_view": 1,
+   "label": "First Name",
+   "reqd": 1
   },
   {
    "fieldname": "last_name",
@@ -29,9 +31,9 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-26 23:56:59.648449",
+ "modified": "2026-05-09 13:08:21.698986",
  "modified_by": "Administrator",
- "module": "Airplane Mode",
+ "module": "airplane mode",
  "name": "Flight Passenger",
  "naming_rule": "Autoincrement",
  "owner": "Administrator",

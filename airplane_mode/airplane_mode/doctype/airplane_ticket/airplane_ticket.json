@@ -19,7 +19,11 @@
   "admin_email",
   "passenger_email",
   "email_subject",
-  "email_body"
+  "email_body",
+  "ticket_price",
+  "tax_rate",
+  "tax_amount",
+  "total_amount"
  ],
  "fields": [
   {
@@ -118,13 +122,34 @@
    "fieldname": "email_body",
    "fieldtype": "Small Text",
    "label": "email_body"
+  },
+  {
+   "fieldname": "ticket_price",
+   "fieldtype": "Currency",
+   "label": "Ticket Price"
+  },
+  {
+   "fieldname": "tax_rate",
+   "fieldtype": "Select",
+   "label": "Tax",
+   "options": "0%\n5%\n12%\n18%\n28%"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-05-09 00:35:53.917528",
+ "modified": "2026-05-09 13:21:06.605699",
  "modified_by": "Administrator",
  "module": "airplane mode",
  "name": "Airplane Ticket",
