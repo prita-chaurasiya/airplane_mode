@@ -15,20 +15,28 @@
   "duration_of_flight",
   "status",
   "amended_from",
-  "destination_airport_code"
+  "destination_airport_code",
+  "admin_email",
+  "passenger_email",
+  "email_subject",
+  "email_body"
  ],
  "fields": [
   {
    "fieldname": "passenger",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Passenger",
-   "options": "Flight Passenger"
+   "options": "Flight Passenger",
+   "reqd": 1
   },
   {
    "fieldname": "source_airport",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Source Airport",
-   "options": "Airport"
+   "options": "Airport",
+   "reqd": 1
   },
   {
    "fieldname": "destination_airport",
@@ -44,13 +52,17 @@
   {
    "fieldname": "flight",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Flight",
-   "options": "Airline"
+   "options": "Airline",
+   "reqd": 1
   },
   {
    "fieldname": "departure_date",
    "fieldtype": "Date",
-   "label": "Departure Date"
+   "in_list_view": 1,
+   "label": "Departure Date",
+   "reqd": 1
   },
   {
    "fieldname": "departure_time",
@@ -66,7 +78,8 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Booked\nChecked-In\nBoarded"
+   "options": "Booked\nChecked-In\nBoarded",
+   "reqd": 1
   },
   {
    "fieldname": "amended_from",
@@ -82,15 +95,38 @@
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "label": "Destination Airport Code"
+  },
+  {
+   "fieldname": "admin_email",
+   "fieldtype": "Data",
+   "label": "admin_email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "passenger_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Passenger Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "email_subject",
+   "fieldtype": "Data",
+   "label": "email_subject"
+  },
+  {
+   "fieldname": "email_body",
+   "fieldtype": "Small Text",
+   "label": "email_body"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-04-27 00:31:57.548712",
+ "modified": "2026-05-09 00:35:53.917528",
  "modified_by": "Administrator",
- "module": "Airplane Mode",
+ "module": "airplane mode",
  "name": "Airplane Ticket",
  "naming_rule": "Expression",
  "owner": "Administrator",
@@ -104,7 +140,9 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],
